@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load the crop recommendation model
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('RandomForest.pkl', 'rb'))
 
 @app.route('/')
 def home():
