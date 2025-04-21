@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 50%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        td, th {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .content {
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Latest Sensor Data</h1>
+    <div class="content">
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>N (Nitrogen)</td>
+                <td>{{ data['N'] }}</td>
+            </tr>
+            <tr>
+                <td>P (Phosphorus)</td>
+                <td>{{ data['P'] }}</td>
+            </tr>
+            <tr>
+                <td>K (Potassium)</td>
+                <td>{{ data['K'] }}</td>
+            </tr>
+            <tr>
+                <td>Temperature</td>
+                <td>{{ data['temperature'] }} °C</td>
+            </tr>
+            <tr>
+                <td>Humidity</td>
+                <td>{{ data['humidity'] }} %</td>
+            </tr>
+            <tr>
+                <td>pH</td>
+                <td>{{ data['ph'] }}</td>
+            </tr>
+            <tr>
+                <td>Rainfall</td>
+                <td>{{ data['rainfall'] }} mm</td>
+            </tr>
+        </table>
+
+        <h2>Prediction:</h2>
+        <p>Recommended Crop: <strong>{{ prediction }}</strong></p>
+    </div>
+</body>
+</html>
