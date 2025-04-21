@@ -43,7 +43,7 @@ def predict():
     prediction = model.predict([features])[0]
 
     # Return the prediction
-    return jsonify({'prediction': prediction})
+    return jsonify({prediction})
 
 @app.route('/viewdata', methods=['GET'])
 def view_data():
